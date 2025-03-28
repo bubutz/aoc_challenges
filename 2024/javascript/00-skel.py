@@ -7,15 +7,6 @@ function checkfile(file_path) {
   }
 }
 
-function file_to_arr(puzzle, pos) {
-}
-
-function part_one(left, right) {
-}
-
-function part_two(left, right) {
-}
-
 function main() {
   if (process.argv[2] === undefined) {
     console.error(`Data file not specified.`);
