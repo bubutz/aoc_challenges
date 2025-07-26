@@ -41,15 +41,18 @@ def parttwo():
                 continue
             if line[cntr:cntr+3].lower() in num_dict:
                 tmp_list.append(num_dict[line[cntr:cntr+3]])
-                cntr += 3
+                # cntr += 3
+                cntr += 1
                 continue
             if line[cntr:cntr+4].lower() in num_dict:
                 tmp_list.append(num_dict[line[cntr:cntr+4]])
-                cntr += 4
+                # cntr += 4
+                cntr += 1
                 continue
             if line[cntr:cntr+5].lower() in num_dict:
                 tmp_list.append(num_dict[line[cntr:cntr+5]])
-                cntr += 5
+                # cntr += 5
+                cntr += 1
                 continue
             cntr += 1
 
@@ -57,7 +60,6 @@ def parttwo():
             parttwo.append(f'{tmp_list[0]}{tmp_list[-1]}')
 
     for i in parttwo:
-        print(i)
         total = total + int(i)
 
     return total
