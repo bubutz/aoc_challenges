@@ -29,11 +29,17 @@ def partone(l: list):
 
 
 def parttwo(l: list):
+    total: int = 0
+
     # things to keep
     #   mul(xxx,yyy)
     #   do
     #   don't
+    all_muls: list = list()
+    for mul in l:
+        all_muls.append(mul.replace('mul(', '').replace(')', ''))
 
+    print(f'Part 2 all val: {all_muls}')
     # Capture if start with m or d
     # fail if next char is not mul(xxx,yyy) or dont
     # when fail, append that to list
@@ -43,7 +49,6 @@ def parttwo(l: list):
     # Calculate when it's do
     # Set to dont (false) when don't appears
     # Dont calculate when it's don't
-    pass
 
 
 def main():
@@ -59,9 +64,7 @@ def main():
     part1 = partone(all_muls)
     print(f'Part 1: {part1}')
 
-    puzzle2 = "".join(puzzle)
-    print(puzzle2)
-    print(type(puzzle2))
+    parttwo(all_muls)
 
 
 if __name__ == '__main__':
